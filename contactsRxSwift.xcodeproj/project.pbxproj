@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F1D62ED2B0D7A3D001DF929 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62EC2B0D7A3D001DF929 /* UserModel.swift */; };
+		8F1D62F02B0D7D72001DF929 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62EF2B0D7D72001DF929 /* UserService.swift */; };
 		8F5196EC2B054E1200A0A932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196EB2B054E1200A0A932 /* AppDelegate.swift */; };
 		8F5196EE2B054E1200A0A932 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196ED2B054E1200A0A932 /* SceneDelegate.swift */; };
 		8F5196F02B054E1200A0A932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196EF2B054E1200A0A932 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		0739909057148A9C5EBB50FD /* Pods_contactsRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contactsRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4925F2E51D9343D969B0ADA1 /* Pods-contactsRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactsRxSwift.release.xcconfig"; path = "Target Support Files/Pods-contactsRxSwift/Pods-contactsRxSwift.release.xcconfig"; sourceTree = "<group>"; };
+		8F1D62EC2B0D7A3D001DF929 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8F1D62EF2B0D7D72001DF929 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8F5196E82B054E1200A0A932 /* contactsRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactsRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5196EB2B054E1200A0A932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F5196ED2B054E1200A0A932 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F1D62EB2B0D747D001DF929 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F1D62EC2B0D7A3D001DF929 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8F1D62EE2B0D7BCD001DF929 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8F1D62EF2B0D7D72001DF929 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8F5196DF2B054E1200A0A932 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +91,8 @@
 		8F5196EA2B054E1200A0A932 /* contactsRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				8F1D62EE2B0D7BCD001DF929 /* Services */,
+				8F1D62EB2B0D747D001DF929 /* Models */,
 				8F5196EB2B054E1200A0A932 /* AppDelegate.swift */,
 				8F5196ED2B054E1200A0A932 /* SceneDelegate.swift */,
 				8F5196EF2B054E1200A0A932 /* ViewController.swift */,
@@ -88,7 +110,6 @@
 				D027FB12475177FA220EDBB4 /* Pods-contactsRxSwift.debug.xcconfig */,
 				4925F2E51D9343D969B0ADA1 /* Pods-contactsRxSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +229,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F5196F02B054E1200A0A932 /* ViewController.swift in Sources */,
+				8F1D62F02B0D7D72001DF929 /* UserService.swift in Sources */,
 				8F5196EC2B054E1200A0A932 /* AppDelegate.swift in Sources */,
+				8F1D62ED2B0D7A3D001DF929 /* UserModel.swift in Sources */,
 				8F5196EE2B054E1200A0A932 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
