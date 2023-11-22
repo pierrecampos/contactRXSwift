@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F1D62ED2B0D7A3D001DF929 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62EC2B0D7A3D001DF929 /* UserModel.swift */; };
 		8F1D62F02B0D7D72001DF929 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62EF2B0D7D72001DF929 /* UserService.swift */; };
+		8F1D62F32B0D8234001DF929 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62F22B0D8234001DF929 /* UserViewModel.swift */; };
+		8F1D62F62B0D84E8001DF929 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62F52B0D84E8001DF929 /* UserCell.swift */; };
 		8F5196EC2B054E1200A0A932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196EB2B054E1200A0A932 /* AppDelegate.swift */; };
 		8F5196EE2B054E1200A0A932 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196ED2B054E1200A0A932 /* SceneDelegate.swift */; };
 		8F5196F02B054E1200A0A932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196EF2B054E1200A0A932 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 		4925F2E51D9343D969B0ADA1 /* Pods-contactsRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactsRxSwift.release.xcconfig"; path = "Target Support Files/Pods-contactsRxSwift/Pods-contactsRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		8F1D62EC2B0D7A3D001DF929 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8F1D62EF2B0D7D72001DF929 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		8F1D62F22B0D8234001DF929 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		8F1D62F52B0D84E8001DF929 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		8F5196E82B054E1200A0A932 /* contactsRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactsRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5196EB2B054E1200A0A932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F5196ED2B054E1200A0A932 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,22 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		8F1D62F12B0D8223001DF929 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8F1D62F22B0D8234001DF929 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8F1D62F42B0D84B6001DF929 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F1D62F52B0D84E8001DF929 /* UserCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8F5196DF2B054E1200A0A932 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +111,8 @@
 		8F5196EA2B054E1200A0A932 /* contactsRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				8F1D62F42B0D84B6001DF929 /* Views */,
+				8F1D62F12B0D8223001DF929 /* ViewModels */,
 				8F1D62EE2B0D7BCD001DF929 /* Services */,
 				8F1D62EB2B0D747D001DF929 /* Models */,
 				8F5196EB2B054E1200A0A932 /* AppDelegate.swift */,
@@ -229,6 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F5196F02B054E1200A0A932 /* ViewController.swift in Sources */,
+				8F1D62F32B0D8234001DF929 /* UserViewModel.swift in Sources */,
+				8F1D62F62B0D84E8001DF929 /* UserCell.swift in Sources */,
 				8F1D62F02B0D7D72001DF929 /* UserService.swift in Sources */,
 				8F5196EC2B054E1200A0A932 /* AppDelegate.swift in Sources */,
 				8F1D62ED2B0D7A3D001DF929 /* UserModel.swift in Sources */,

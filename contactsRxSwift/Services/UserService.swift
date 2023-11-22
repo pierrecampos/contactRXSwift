@@ -11,7 +11,7 @@ import RxSwift
 protocol UserServiceProtocol {
     func callAPI<T: Codable>() -> Observable<T>
 }
-//func callAPI<T>() -> RxSwift.Observable<T> where T : Decodable, T : Encodable {
+
 class UserService: UserServiceProtocol {
     let baseURL = URL(string: "https://randomuser.me/api/?page=0&results=20&seed=abc&nat=br")!
     let session = URLSession(configuration: .default)
