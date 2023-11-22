@@ -13,12 +13,12 @@ struct UserResonse: Codable {
 }
 
 struct User: Codable {
-//    let id: ID
+    let id: ID
     let name: Name
 }
 
 struct ID: Codable {
-    let type: String
+    let name: String
     let value: String
 }
 
