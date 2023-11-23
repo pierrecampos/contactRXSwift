@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     
     func configureUI() {
         tableView.rowHeight = 100
+        
+        // Custom Cell
+        let nib = UINib(nibName: "UserTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CellCustom")
     }
     
     func bindUI() {
@@ -35,9 +39,14 @@ class ViewController: UIViewController {
             // TODO: show error alert
         }).disposed(by: disposeBag)
         
-        userList.bind(to: tableView.rx.items(cellIdentifier: "CellID", cellType: UserCell.self)) { row, model, cell in
+        userList.bind(to: tableView.rx.items(cellIdentifier: "CellCustom", cellType: UserTableViewCell.self)) { row, model, cell in
             cell.configureCell(user: model)
         }.disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected.subscribe { indexPath in
+            self.tableView.deselectRow(at: indexPath, animated: true)
+            // TODO: Go to Detail Controllers
+        }
         
 
     }

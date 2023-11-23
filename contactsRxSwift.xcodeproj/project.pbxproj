@@ -10,13 +10,14 @@
 		8F1D62ED2B0D7A3D001DF929 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62EC2B0D7A3D001DF929 /* UserModel.swift */; };
 		8F1D62F02B0D7D72001DF929 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62EF2B0D7D72001DF929 /* UserService.swift */; };
 		8F1D62F32B0D8234001DF929 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62F22B0D8234001DF929 /* UserViewModel.swift */; };
-		8F1D62F62B0D84E8001DF929 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D62F52B0D84E8001DF929 /* UserCell.swift */; };
 		8F5196EC2B054E1200A0A932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196EB2B054E1200A0A932 /* AppDelegate.swift */; };
 		8F5196EE2B054E1200A0A932 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196ED2B054E1200A0A932 /* SceneDelegate.swift */; };
 		8F5196F02B054E1200A0A932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5196EF2B054E1200A0A932 /* ViewController.swift */; };
 		8F5196F32B054E1200A0A932 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5196F12B054E1200A0A932 /* Main.storyboard */; };
 		8F5196F52B054E1300A0A932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5196F42B054E1300A0A932 /* Assets.xcassets */; };
 		8F5196F82B054E1300A0A932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5196F62B054E1300A0A932 /* LaunchScreen.storyboard */; };
+		8FF394E42B0ED79700522174 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF394E22B0ED79700522174 /* UserTableViewCell.swift */; };
+		8FF394E52B0ED79700522174 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF394E32B0ED79700522174 /* UserTableViewCell.xib */; };
 		F4FA4C4C739381D5296D265D /* Pods_contactsRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0739909057148A9C5EBB50FD /* Pods_contactsRxSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,6 @@
 		8F1D62EC2B0D7A3D001DF929 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8F1D62EF2B0D7D72001DF929 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8F1D62F22B0D8234001DF929 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		8F1D62F52B0D84E8001DF929 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		8F5196E82B054E1200A0A932 /* contactsRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactsRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5196EB2B054E1200A0A932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F5196ED2B054E1200A0A932 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +35,8 @@
 		8F5196F42B054E1300A0A932 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F5196F72B054E1300A0A932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F5196F92B054E1300A0A932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FF394E22B0ED79700522174 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		8FF394E32B0ED79700522174 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		D027FB12475177FA220EDBB4 /* Pods-contactsRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactsRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-contactsRxSwift/Pods-contactsRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +87,7 @@
 		8F1D62F42B0D84B6001DF929 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8F1D62F52B0D84E8001DF929 /* UserCell.swift */,
+				8FF394E12B0ED77700522174 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +126,15 @@
 				8F5196F92B054E1300A0A932 /* Info.plist */,
 			);
 			path = contactsRxSwift;
+			sourceTree = "<group>";
+		};
+		8FF394E12B0ED77700522174 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8FF394E22B0ED79700522174 /* UserTableViewCell.swift */,
+				8FF394E32B0ED79700522174 /* UserTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D7AEF3D78F205231EA645387 /* Pods */ = {
@@ -195,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF394E52B0ED79700522174 /* UserTableViewCell.xib in Resources */,
 				8F5196F82B054E1300A0A932 /* LaunchScreen.storyboard in Resources */,
 				8F5196F52B054E1300A0A932 /* Assets.xcassets in Resources */,
 				8F5196F32B054E1200A0A932 /* Main.storyboard in Resources */,
@@ -252,8 +264,8 @@
 			files = (
 				8F5196F02B054E1200A0A932 /* ViewController.swift in Sources */,
 				8F1D62F32B0D8234001DF929 /* UserViewModel.swift in Sources */,
-				8F1D62F62B0D84E8001DF929 /* UserCell.swift in Sources */,
 				8F1D62F02B0D7D72001DF929 /* UserService.swift in Sources */,
+				8FF394E42B0ED79700522174 /* UserTableViewCell.swift in Sources */,
 				8F5196EC2B054E1200A0A932 /* AppDelegate.swift in Sources */,
 				8F1D62ED2B0D7A3D001DF929 /* UserModel.swift in Sources */,
 				8F5196EE2B054E1200A0A932 /* SceneDelegate.swift in Sources */,
@@ -430,7 +442,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -463,7 +475,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
