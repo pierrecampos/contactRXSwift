@@ -13,7 +13,7 @@ protocol UserServiceProtocol {
 }
 
 class UserService: UserServiceProtocol {
-    let baseURL = URL(string: "https://randomuser.me/api/?page=0&results=20&seed=abc&nat=br")!
+    let baseURL = URL(string: "https://randomuser.me/api/?page=0&results=20&seed=aaa&nat=br")!
     let session = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask? = nil
     

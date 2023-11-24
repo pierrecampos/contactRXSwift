@@ -15,6 +15,13 @@ struct UserResonse: Codable {
 struct User: Codable {
     let id: ID
     let name: Name
+    var fullName: String {
+        return "\(name.first) \(name.last)"
+    }
+    
+    let picture: Picture
+
+    
 }
 
 struct ID: Codable {
@@ -25,4 +32,8 @@ struct ID: Codable {
 struct Name: Codable {
     let first: String
     let last: String
+}
+
+struct Picture: Codable {
+    let large: String
 }
