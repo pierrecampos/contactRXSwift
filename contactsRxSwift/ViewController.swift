@@ -13,13 +13,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let disposeBag = DisposeBag()
-
+    
     let viewModel = UserViewModel()
     let userList = BehaviorRelay<[User]>(value: [])
-
+    let limit = 20
+    var page = 1
+    var isUpdating = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchUsers()
+        viewModel.fetchUsers(page, limit)
         configureUI()
         bindUI()
     }
@@ -33,12 +36,17 @@ class ViewController: UIViewController {
     }
     
     func bindUI() {
-        viewModel.users?.subscribe(onNext: { users in
+        viewModel.usersObservable.subscribe(onNext: { users in
             self.userList.accept(users)
+            if(users.count > 0) {
+                self.page += 1
+            }
+            self.isUpdating = false
         }, onError: { error in
+            self.isUpdating = false
             // TODO: show error alert
-        }).disposed(by: disposeBag)
-        
+        })
+        .disposed(by: disposeBag)
         userList.bind(to: tableView.rx.items(cellIdentifier: "CellCustom", cellType: UserTableViewCell.self)) { row, model, cell in
             cell.configureCell(user: model)
         }.disposed(by: disposeBag)
@@ -48,7 +56,16 @@ class ViewController: UIViewController {
             // TODO: Go to Detail Controllers
         }
         
-
+        tableView.rx.willDisplayCell.subscribe(onNext: { cell, indexPath in
+            let lastIndexSection = self.tableView.numberOfSections - 1
+            let lastRowIndex = self.tableView.numberOfRows(inSection: lastIndexSection) - 1
+            
+            if(!self.isUpdating && indexPath.row >= lastRowIndex) {
+//                self.isUpdating = true
+                self.viewModel.fetchUsers(self.page, self.limit)
+            }
+            
+        }).disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,8 +74,8 @@ class ViewController: UIViewController {
         navigationItem.title = "Contatos"
         navigationController?.navigationBar.sizeToFit()
     }
-
-
+    
+    
 }
 
 
