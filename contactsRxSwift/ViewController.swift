@@ -12,6 +12,13 @@ import RxCocoa
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    private lazy var spinner: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .medium)
+        activityIndicator.frame = CGRect(origin: .zero, size: CGSize(width: tableView.bounds.width, height: 100))
+        activityIndicator.startAnimating()
+        return activityIndicator
+    }()
+    
     private let disposeBag = DisposeBag()
     
     let viewModel = UserViewModel()
@@ -40,10 +47,10 @@ class ViewController: UIViewController {
             self.userList.accept(users)
             if(users.count > 0) {
                 self.page += 1
-            }
-            self.isUpdating = false
+            }  
+            self.stopSpinnerCell()
         }, onError: { error in
-            self.isUpdating = false
+            self.stopSpinnerCell()
             // TODO: show error alert
         })
         .disposed(by: disposeBag)
@@ -61,7 +68,9 @@ class ViewController: UIViewController {
             let lastRowIndex = self.tableView.numberOfRows(inSection: lastIndexSection) - 1
             
             if(!self.isUpdating && indexPath.row >= lastRowIndex) {
-//                self.isUpdating = true
+                self.tableView.tableFooterView = self.spinner
+                self.tableView.tableFooterView?.isHidden = false
+                self.isUpdating = true
                 self.viewModel.fetchUsers(self.page, self.limit)
             }
             
@@ -73,6 +82,15 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Contatos"
         navigationController?.navigationBar.sizeToFit()
+    }
+    
+    
+    private func stopSpinnerCell() {
+        DispatchQueue.main.async {
+            self.spinner.stopAnimating()
+            self.spinner.hidesWhenStopped = true
+        }       
+        isUpdating = false
     }
     
     
