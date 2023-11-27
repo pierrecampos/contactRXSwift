@@ -15,18 +15,15 @@ class UserViewModel {
     
     let userService = UserService()
     var users: Observable<[User]>?
-    private var usersBehavior = BehaviorRelay<[User]>(value: [])
+    private var usersRelay = BehaviorRelay<[User]>(value: [])
     var usersObservable: Observable<[User]> {
-        return usersBehavior.asObservable()
+        return usersRelay.asObservable()
     }
-    
-    
     
     func fetchUsers(_ page: Int, _ limit: Int) {
         users = userService.callAPI(page, limit)
         users?.subscribe(onNext: { value in
-            self.usersBehavior.accept(self.usersBehavior.value + value)
-        
+            self.usersRelay.accept(self.usersRelay.value + value)
         }).disposed(by: disposeBag)
     }
     

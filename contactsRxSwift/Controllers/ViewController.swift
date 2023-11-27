@@ -34,6 +34,13 @@ class ViewController: UIViewController {
         bindUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Contatos"
+        navigationController?.navigationBar.sizeToFit()
+    }
+    
     func configureUI() {
         tableView.rowHeight = 100
         
@@ -47,7 +54,7 @@ class ViewController: UIViewController {
             self.userList.accept(users)
             if(users.count > 0) {
                 self.page += 1
-            }  
+            }
             self.stopSpinnerCell()
         }, onError: { error in
             self.stopSpinnerCell()
@@ -60,8 +67,15 @@ class ViewController: UIViewController {
         
         tableView.rx.itemSelected.subscribe { indexPath in
             self.tableView.deselectRow(at: indexPath, animated: true)
-            // TODO: Go to Detail Controllers
-        }
+            
+            guard let detailController = self.storyboard?.instantiateViewController(withIdentifier: "DetailController") as? DetailViewController else {
+                return
+            }
+            
+            detailController.contact = self.userList.value[indexPath.row]
+            self.navigationController?.pushViewController(detailController, animated: true)
+            
+        }.disposed(by: disposeBag)
         
         tableView.rx.willDisplayCell.subscribe(onNext: { cell, indexPath in
             let lastIndexSection = self.tableView.numberOfSections - 1
@@ -77,19 +91,11 @@ class ViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Contatos"
-        navigationController?.navigationBar.sizeToFit()
-    }
-    
-    
     private func stopSpinnerCell() {
         DispatchQueue.main.async {
             self.spinner.stopAnimating()
             self.spinner.hidesWhenStopped = true
-        }       
+        }
         isUpdating = false
     }
     

@@ -19,9 +19,7 @@ struct User: Codable {
         return "\(name.first) \(name.last)"
     }
     
-    let picture: Picture
-
-    
+    let picture: Picture    
 }
 
 struct ID: Codable {
