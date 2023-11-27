@@ -8,7 +8,7 @@
 import UIKit
 
 class UserTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -18,7 +18,7 @@ class UserTableViewCell: UITableViewCell {
     }
     
     func configureLayout() {
-        userImage.layer.cornerRadius = 8
+        userImage.layer.cornerRadius = userImage.frame.height / 2
         userImage.clipsToBounds = true
         userImage.contentMode = .scaleAspectFit
     }
