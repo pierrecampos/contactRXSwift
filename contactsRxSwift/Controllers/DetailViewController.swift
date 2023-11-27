@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var userImage: UIImageView!
     
+    @IBOutlet weak var userNameLabel: UILabel!
     
     var contact: User!
     
@@ -29,6 +30,7 @@ class DetailViewController: UIViewController {
     
     func configureUI() {
         userImage.imageOfUrl(contact.picture.large)
+        userNameLabel.text = contact.fullName
     }
     
     

@@ -58,8 +58,8 @@
                                             <constraint firstAttribute="width" constant="128" id="drd-fs-CFS"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Macário Nascimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgO-7D-yUH">
-                                        <rect key="frame" x="118.66666666666669" y="236" width="156" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgO-7D-yUH" userLabel="User Name">
+                                        <rect key="frame" x="175" y="236" width="43" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -85,6 +85,7 @@
                     </view>
                     <connections>
                         <outlet property="userImage" destination="kvQ-sK-kN8" id="Hi4-Ab-xlL"/>
+                        <outlet property="userNameLabel" destination="HgO-7D-yUH" id="car-5m-pAQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lo2-vp-Ck0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
