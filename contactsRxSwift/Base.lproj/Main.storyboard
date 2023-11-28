@@ -59,7 +59,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgO-7D-yUH" userLabel="User Name">
-                                        <rect key="frame" x="175" y="236" width="43" height="21"/>
+                                        <rect key="frame" x="175.33333333333334" y="236" width="42.333333333333343" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -74,13 +74,50 @@
                                     <constraint firstItem="HgO-7D-yUH" firstAttribute="top" secondItem="kvQ-sK-kN8" secondAttribute="bottom" constant="12" id="zhh-Nb-3u6"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Aph-z3-cFu">
+                                <rect key="frame" x="0.0" y="284" width="393" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celular:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1y-gP-kUj" userLabel="Cell Label">
+                                        <rect key="frame" x="8" y="8" width="58" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(037) 9 9909-3374" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REB-2r-xKl" userLabel="Cell Number">
+                                        <rect key="frame" x="8" y="35" width="149.33333333333334" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awU-Ah-UpP" userLabel="Telephone Label">
+                                        <rect key="frame" x="8" y="62" width="69.666666666666671" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(037) 3242-3374" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-r1-cx5" userLabel="Telephone Number">
+                                        <rect key="frame" x="8" y="89" width="133.33333333333334" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="HTF-vH-Obx"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pxk-Gr-TXx"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
+                            <constraint firstItem="Aph-z3-cFu" firstAttribute="top" secondItem="ZHv-Sm-fr9" secondAttribute="bottom" constant="14" id="EJz-3E-bQN"/>
                             <constraint firstItem="ZHv-Sm-fr9" firstAttribute="top" secondItem="UVO-Eh-3eH" secondAttribute="top" id="L2q-g5-NV2"/>
+                            <constraint firstItem="Pxk-Gr-TXx" firstAttribute="trailing" secondItem="Aph-z3-cFu" secondAttribute="trailing" id="LLs-Bd-X7L"/>
                             <constraint firstItem="ZHv-Sm-fr9" firstAttribute="leading" secondItem="Pxk-Gr-TXx" secondAttribute="leading" id="LOt-Mw-coG"/>
                             <constraint firstItem="ZHv-Sm-fr9" firstAttribute="trailing" secondItem="Pxk-Gr-TXx" secondAttribute="trailing" id="rOC-ED-bxM"/>
+                            <constraint firstItem="Aph-z3-cFu" firstAttribute="leading" secondItem="Pxk-Gr-TXx" secondAttribute="leading" id="wUB-82-fac"/>
                         </constraints>
                     </view>
                     <connections>
@@ -112,6 +149,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
