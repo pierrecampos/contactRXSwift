@@ -18,8 +18,9 @@ struct User: Codable {
     var fullName: String {
         return "\(name.first) \(name.last)"
     }
-    
-    let picture: Picture    
+    let picture: Picture
+    let phone: String?
+    let cell: String?
 }
 
 struct ID: Codable {

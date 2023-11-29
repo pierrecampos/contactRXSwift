@@ -78,29 +78,27 @@
                                 <rect key="frame" x="0.0" y="284" width="393" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celular:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1y-gP-kUj" userLabel="Cell Label">
-                                        <rect key="frame" x="8" y="8" width="58" height="22"/>
+                                        <rect key="frame" x="8" y="8" width="58" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(037) 9 9909-3374" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REB-2r-xKl" userLabel="Cell Number">
-                                        <rect key="frame" x="8" y="35" width="149.33333333333334" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="linkColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVv-OG-HMQ" userLabel="CellNumberButton">
+                                        <rect key="frame" x="8" y="30" width="161.33333333333334" height="28.666666666666671"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="(00) 00000-0000"/>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awU-Ah-UpP" userLabel="Telephone Label">
-                                        <rect key="frame" x="8" y="62" width="69.666666666666671" height="22"/>
+                                        <rect key="frame" x="8" y="63.666666666666686" width="69.666666666666671" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(037) 3242-3374" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-r1-cx5" userLabel="Telephone Number">
-                                        <rect key="frame" x="8" y="89" width="133.33333333333334" height="23"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="linkColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68I-XL-nEe" userLabel="TelephoneNumberButton">
+                                        <rect key="frame" x="8" y="85.666666666666686" width="161.33333333333334" height="26.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="(00) 00000-0000"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -121,6 +119,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cellNumberButton" destination="pVv-OG-HMQ" id="jqA-7f-3sN"/>
+                        <outlet property="telephoneNumberButton" destination="68I-XL-nEe" id="LyM-4e-wUs"/>
                         <outlet property="userImage" destination="kvQ-sK-kN8" id="Hi4-Ab-xlL"/>
                         <outlet property="userNameLabel" destination="HgO-7D-yUH" id="car-5m-pAQ"/>
                     </connections>
@@ -149,9 +149,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
