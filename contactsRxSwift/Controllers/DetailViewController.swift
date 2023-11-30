@@ -43,6 +43,7 @@ class DetailViewController: UIViewController {
     func bindUI() {
         cellNumberButton.addTarget(self, action: #selector(callNumber), for: .touchUpInside)
         telephoneNumberButton.addTarget(self, action: #selector(callNumber), for: .touchUpInside)
+        emailButton.addTarget(self, action: #selector(openEmail), for: .touchUpInside)
     }
     
     @objc private func callNumber(sender: UIButton) {
@@ -51,6 +52,16 @@ class DetailViewController: UIViewController {
             let application = UIApplication.shared
             if(application.canOpenURL(phoneURL)) {
                 application.open(phoneURL)
+            }
+        }
+    }
+    
+    @objc func openEmail(sender: UIButton) {
+        guard let email = sender.titleLabel?.text else {return}
+        if let emailURL = URL(string: "mailto:\(email)") {
+            let application = UIApplication.shared
+            if(application.canOpenURL(emailURL)) {
+                application.open(emailURL)
             }
         }
     }
