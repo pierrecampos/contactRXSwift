@@ -21,6 +21,7 @@ struct User: Codable {
     let picture: Picture
     let phone: String?
     let cell: String?
+    let email: String? 
 }
 
 struct ID: Codable {

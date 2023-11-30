@@ -74,35 +74,46 @@
                                     <constraint firstItem="HgO-7D-yUH" firstAttribute="top" secondItem="kvQ-sK-kN8" secondAttribute="bottom" constant="12" id="zhh-Nb-3u6"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Aph-z3-cFu">
-                                <rect key="frame" x="0.0" y="284" width="393" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Aph-z3-cFu" userLabel="ContactStack">
+                                <rect key="frame" x="0.0" y="284" width="393" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celular:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1y-gP-kUj" userLabel="Cell Label">
-                                        <rect key="frame" x="8" y="8" width="58" height="17"/>
+                                        <rect key="frame" x="8" y="8" width="58" height="13.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVv-OG-HMQ" userLabel="CellNumberButton">
-                                        <rect key="frame" x="8" y="30" width="161.33333333333334" height="28.666666666666671"/>
+                                        <rect key="frame" x="8" y="26.333333333333314" width="161.33333333333334" height="22.666666666666671"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="(00) 00000-0000"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awU-Ah-UpP" userLabel="Telephone Label">
-                                        <rect key="frame" x="8" y="63.666666666666686" width="69.666666666666671" height="17"/>
+                                        <rect key="frame" x="8" y="54" width="69.666666666666671" height="13.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68I-XL-nEe" userLabel="TelephoneNumberButton">
-                                        <rect key="frame" x="8" y="85.666666666666686" width="161.33333333333334" height="26.333333333333329"/>
+                                        <rect key="frame" x="8" y="72.333333333333314" width="161.33333333333334" height="22.333333333333329"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="(00) 00000-0000"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBw-I0-bik" userLabel="Email Label">
+                                        <rect key="frame" x="8" y="99.666666666666686" width="53" height="13.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-T7-1FA" userLabel="EmailButton">
+                                        <rect key="frame" x="8" y="118" width="132.66666666666666" height="14"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="abc@abc.com"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="HTF-vH-Obx"/>
+                                    <constraint firstAttribute="height" constant="140" id="HTF-vH-Obx"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
@@ -120,6 +131,7 @@
                     </view>
                     <connections>
                         <outlet property="cellNumberButton" destination="pVv-OG-HMQ" id="jqA-7f-3sN"/>
+                        <outlet property="emailButton" destination="vdS-T7-1FA" id="REG-vs-Qge"/>
                         <outlet property="telephoneNumberButton" destination="68I-XL-nEe" id="LyM-4e-wUs"/>
                         <outlet property="userImage" destination="kvQ-sK-kN8" id="Hi4-Ab-xlL"/>
                         <outlet property="userNameLabel" destination="HgO-7D-yUH" id="car-5m-pAQ"/>
@@ -153,7 +165,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -11,12 +11,11 @@ import RxRelay
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var userImage: UIImageView!
-    
     @IBOutlet weak var userNameLabel: UILabel!
-    
-    
     @IBOutlet weak var cellNumberButton: UIButton!
     @IBOutlet weak var telephoneNumberButton: UIButton!
+    @IBOutlet weak var emailButton: UIButton!
+    
     
     var contact: User!
     
@@ -38,13 +37,13 @@ class DetailViewController: UIViewController {
         userNameLabel.text = contact.fullName
         cellNumberButton.setTitle(contact.cell ?? "", for: .normal)
         telephoneNumberButton.setTitle(contact.phone ?? "", for: .normal)
+        emailButton.setTitle(contact.email ?? "", for: .normal)
     }
     
     func bindUI() {
         cellNumberButton.addTarget(self, action: #selector(callNumber), for: .touchUpInside)
         telephoneNumberButton.addTarget(self, action: #selector(callNumber), for: .touchUpInside)
     }
-    
     
     @objc private func callNumber(sender: UIButton) {
         guard let phoneNumber = sender.titleLabel?.text else {return}
@@ -55,8 +54,4 @@ class DetailViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-    
 }
