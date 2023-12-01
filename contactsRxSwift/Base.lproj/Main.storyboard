@@ -126,8 +126,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rua São Paulo, 3843, Juazeiro do Norte - Ceará" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1Q-8a-TLh" userLabel="AdressText">
-                                        <rect key="frame" x="8" y="33.333333333333314" width="347" height="19.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1Q-8a-TLh" userLabel="AdressText">
+                                        <rect key="frame" x="8" y="33.333333333333314" width="7.3333333333333321" height="19.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -152,7 +152,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressStack" destination="225-X7-htT" id="deA-AC-c9D"/>
+                        <outlet property="addressText" destination="f1Q-8a-TLh" id="l26-0p-cuY"/>
                         <outlet property="cellNumberButton" destination="pVv-OG-HMQ" id="jqA-7f-3sN"/>
+                        <outlet property="contactStack" destination="Aph-z3-cFu" id="uoK-qS-oUE"/>
                         <outlet property="emailButton" destination="vdS-T7-1FA" id="REG-vs-Qge"/>
                         <outlet property="telephoneNumberButton" destination="68I-XL-nEe" id="LyM-4e-wUs"/>
                         <outlet property="userImage" destination="kvQ-sK-kN8" id="Hi4-Ab-xlL"/>

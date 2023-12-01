@@ -15,7 +15,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var cellNumberButton: UIButton!
     @IBOutlet weak var telephoneNumberButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var addressText: UILabel!
     
+    @IBOutlet weak var contactStack: UIStackView!
+    @IBOutlet weak var addressStack: UIStackView!
     
     var contact: User!
     
@@ -30,6 +33,11 @@ class DetailViewController: UIViewController {
         userImage.layer.cornerRadius = userImage.frame.height / 2
         userImage.clipsToBounds = true
         userImage.contentMode = .scaleAspectFit
+        
+        contactStack.layer.cornerRadius = 8
+        contactStack.clipsToBounds = true
+        addressStack.layer.cornerRadius = 8
+        addressStack.clipsToBounds = true
     }
     
     func configureUI() {
@@ -38,6 +46,7 @@ class DetailViewController: UIViewController {
         cellNumberButton.setTitle(contact.cell ?? "", for: .normal)
         telephoneNumberButton.setTitle(contact.phone ?? "", for: .normal)
         emailButton.setTitle(contact.email ?? "", for: .normal)
+        addressText.text = contact.simplifiedLocation
     }
     
     func bindUI() {

@@ -22,6 +22,10 @@ struct User: Codable {
     let phone: String?
     let cell: String?
     let email: String? 
+    let location: Location
+    var simplifiedLocation: String {
+        return "\(location.street.name), \(location.street.number), \(location.city) - \(location.state)"
+    }
 }
 
 struct ID: Codable {
@@ -36,4 +40,15 @@ struct Name: Codable {
 
 struct Picture: Codable {
     let large: String
+}
+
+struct Location: Codable {
+    let street: Street
+    let city: String
+    let state: String
+}
+
+struct Street: Codable {
+    let name: String
+    let number: Int
 }
