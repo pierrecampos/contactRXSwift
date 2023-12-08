@@ -25,7 +25,7 @@ Este aplicativo exibe uma lista de contatos obtidos da [API RandomUser](https://
 
 1. Abra o aplicativo no simulador do Xcode ou em um dispositivo iOS.
 
-2. Na tela inicial, selecione o contato para mais detalhes ou utilize o scroll para exibir mais contatos.
+2. Na tela inicial, selecione um contato para mais detalhes ou utilize o scroll para exibir mais contatos.
 
 ## Estudo aplicado
 
