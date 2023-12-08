@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIImageView {
+    
     public func imageOfUrl(_ url: String) {
         guard let url = URL(string: url) else { return }
         

@@ -16,6 +16,9 @@
 		8F5196F32B054E1200A0A932 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5196F12B054E1200A0A932 /* Main.storyboard */; };
 		8F5196F52B054E1300A0A932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5196F42B054E1300A0A932 /* Assets.xcassets */; };
 		8F5196F82B054E1300A0A932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5196F62B054E1300A0A932 /* LaunchScreen.storyboard */; };
+		8F66FBA72B23865400A3F636 /* UIImage+Decoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F66FBA62B23865400A3F636 /* UIImage+Decoded.swift */; };
+		8F66FBAA2B23898B00A3F636 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F66FBA92B23898B00A3F636 /* ImageCacheType.swift */; };
+		8F66FBAD2B238C9100A3F636 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F66FBAC2B238C9100A3F636 /* ImageCache.swift */; };
 		8FA669472B10286A00F012D9 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA669462B10286A00F012D9 /* UIImageView+DownloadImage.swift */; };
 		8FDE82DC2B154D7A00C6CB1A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDE82DB2B154D7A00C6CB1A /* DetailViewController.swift */; };
 		8FF394E42B0ED79700522174 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF394E22B0ED79700522174 /* UserTableViewCell.swift */; };
@@ -37,6 +40,9 @@
 		8F5196F42B054E1300A0A932 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F5196F72B054E1300A0A932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F5196F92B054E1300A0A932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F66FBA62B23865400A3F636 /* UIImage+Decoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decoded.swift"; sourceTree = "<group>"; };
+		8F66FBA92B23898B00A3F636 /* ImageCacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheType.swift; sourceTree = "<group>"; };
+		8F66FBAC2B238C9100A3F636 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		8FA669462B10286A00F012D9 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		8FDE82DB2B154D7A00C6CB1A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8FF394E22B0ED79700522174 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,9 +139,27 @@
 			path = contactsRxSwift;
 			sourceTree = "<group>";
 		};
+		8F66FBA82B23897B00A3F636 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8F66FBA92B23898B00A3F636 /* ImageCacheType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8F66FBAB2B238C5200A3F636 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				8F66FBAC2B238C9100A3F636 /* ImageCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		8FA669442B10283D00F012D9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8F66FBAB2B238C5200A3F636 /* Cache */,
+				8F66FBA82B23897B00A3F636 /* Protocols */,
 				8FA669452B10284200F012D9 /* Extensions */,
 			);
 			path = Utils;
@@ -145,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				8FA669462B10286A00F012D9 /* UIImageView+DownloadImage.swift */,
+				8F66FBA62B23865400A3F636 /* UIImage+Decoded.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -296,6 +321,9 @@
 				8F5196F02B054E1200A0A932 /* ViewController.swift in Sources */,
 				8F1D62F32B0D8234001DF929 /* UserViewModel.swift in Sources */,
 				8F1D62F02B0D7D72001DF929 /* UserService.swift in Sources */,
+				8F66FBA72B23865400A3F636 /* UIImage+Decoded.swift in Sources */,
+				8F66FBAA2B23898B00A3F636 /* ImageCacheType.swift in Sources */,
+				8F66FBAD2B238C9100A3F636 /* ImageCache.swift in Sources */,
 				8FF394E42B0ED79700522174 /* UserTableViewCell.swift in Sources */,
 				8F5196EC2B054E1200A0A932 /* AppDelegate.swift in Sources */,
 				8FA669472B10286A00F012D9 /* UIImageView+DownloadImage.swift in Sources */,
