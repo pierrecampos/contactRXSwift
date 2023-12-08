@@ -25,7 +25,14 @@ class UserTableViewCell: UITableViewCell {
     
     func configureCell(user: User) {
         nameLabel.text = user.fullName
-        userImage.imageOfUrl(user.picture.large)
+        ImageLoader.shared.imageOfUrl(user.picture.large) { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.userImage.image = image
+            case .failure:
+                self?.userImage.image = UIImage(systemName: "person.fill")
+            }
+        }
     }
     
 }

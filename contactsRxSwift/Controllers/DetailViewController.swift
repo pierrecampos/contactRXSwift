@@ -41,12 +41,23 @@ class DetailViewController: UIViewController {
     }
     
     func configureUI() {
-        userImage.imageOfUrl(contact.picture.large)
+        configureAvatar()
         userNameLabel.text = contact.fullName
         cellNumberButton.setTitle(contact.cell ?? "", for: .normal)
         telephoneNumberButton.setTitle(contact.phone ?? "", for: .normal)
         emailButton.setTitle(contact.email ?? "", for: .normal)
         addressText.text = contact.simplifiedLocation
+    }
+    
+    func configureAvatar() {
+        ImageLoader.shared.imageOfUrl(contact.picture.large) { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.userImage.image = image
+            case .failure:
+                self?.userImage.image = UIImage(systemName: "person.fill")
+            }
+        }
     }
     
     func bindUI() {
